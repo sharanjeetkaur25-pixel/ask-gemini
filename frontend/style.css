@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #f4f4f4;
+    padding: 50px 20px;
+}
+
+/* /////////////////Heading////////////////// */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* //////////////////Description///////////////// */
+body > p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* /////////////////// Question input/////////////////// */
+#question {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+#question:focus {
+    border-color: #333;
+}
+
+/* /////////////////////// Ask button ////////////////// */
+#askButton {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #333;
+    color: white;
+
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#askButton:hover {
+    background: #555;
+}
+
+/* ///////////////////// Answer heading////////////////// */
+h2 {
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 35px;
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+/* ////////////////////////Answer box//////////////////// */
+#answer {
+    width: 100%;
+    max-width: 600px;
+
+    min-height: 100px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    text-align: left;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ///////////////// media queries////////////////// */
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    body > p {
+        font-size: 16px;
+    }
+
+    #question {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    #askButton {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 21px;
+        margin-top: 25px;
+    }
+
+    #answer {
+        font-size: 15px;
+        padding: 15px;
+    }
+}
