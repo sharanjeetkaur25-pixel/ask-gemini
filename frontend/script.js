@@ -3,7 +3,6 @@ const askButton = document.getElementById("askButton");
 const answer = document.getElementById("answer");
 
 askButton.addEventListener("click", async () => {
-
     const question = questionInput.value.trim();
 
     if (question === "") {
@@ -14,14 +13,11 @@ askButton.addEventListener("click", async () => {
     answer.textContent = "Thinking...";
 
     try {
-
-        const response = await fetch("/ask", {
+        const response = await fetch("https://ask-gemini-gtkc.onrender.com/ask", {
             method: "POST",
-
             headers: {
                 "Content-Type": "application/json"
             },
-
             body: JSON.stringify({
                 question: question
             })
@@ -37,9 +33,7 @@ askButton.addEventListener("click", async () => {
         answer.textContent = data.answer;
 
     } catch (error) {
-
         console.error(error);
-
         answer.textContent = "Unable to connect to the server.";
     }
 });
